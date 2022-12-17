@@ -1,0 +1,45 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif, 'Gill Sans';
+    font-size: 1rem;
+    background-image: url(cubes-1920x1080.png);
+}
+
+form {
+    width: 100vw;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info {
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+
+
+
+
+.loc {
+    display: flex;
+}
