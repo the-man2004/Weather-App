@@ -1,12 +1,14 @@
-const container = document.querySelector(".container");
+
 const input = document.querySelector(".search");
 const button = document.querySelector("button");
 
-const loc = document.querySelector(".loc");
-const temps = document.querySelector(".temp");
+const city = document.querySelector(".city");
+const country = document.querySelector(".country")
+const celsius = document.querySelector(".celsius");
+const fahrenheit = document.querySelector(".fahrenheit");
 const wind = document.querySelector(".wind");
-const weathers = document.querySelector(".weather");
-const humidityS = document.querySelector(".humidity");
+const weather = document.querySelector(".weather");
+const humidity = document.querySelector(".humidity");
 
 
 button.addEventListener('click', inputInfo);
@@ -26,19 +28,13 @@ function inputInfo() {
 
 
 function displayCity(name) {
-    let city = document.createElement("div");
     city.innerText = name;
-    city.classList.add("city");
-    loc.appendChild(city);
 }
 /*
     country
 */
-function countryDisplay(country) {
-    let countryN = document.createElement("div");
-    countryN.innerText = " " + country;
-    countryN.classList.add("country");
-    loc.appendChild(countryN);
+function countryDisplay(count) {
+    country.innerText = count;
 }
 
 
@@ -48,19 +44,13 @@ function countryDisplay(country) {
 function displayWeatherInCelsius(temp) {
     let temperature = Math.round(temp - 273,15);
 
-    let tempC = document.createElement("div");
-    tempC.innerText = temperature + "°C";
-    tempC.classList.add("temp");
-    temps.appendChild(tempC);
+    celsius.innerText = temperature + "°C";
 };
 
 function displayWeatherInFahrenheit(temp) {
     let temperature = Math.round(temp * 9/5 - 459.67);
 
-    let tempF = document.createElement("div");
-    tempF.innerText = temperature + "°F";
-    tempF.classList.add("temp");
-    temps.appendChild(tempF);
+    fahrenheit.innerText = temperature + "°F";
 }
 
 
@@ -70,31 +60,22 @@ function displayWeatherInFahrenheit(temp) {
 function windSpeadDisplay(windSpeed) {
     let windSpeedKph = Math.round(windSpeed * 3.6);
 
-    let windSpeeds = document.createElement("div");
-    windSpeeds.innerText = "wind: " + windSpeedKph + "kph";
-    windSpeeds.classList.add("windSpeeds");
-    wind.appendChild(windSpeeds);
+    wind.innerText = "wind: " + windSpeedKph + "kph";
 }
 
 
 /*
     weather
 */
-function weatherDisplay(weather) {
-    let weatherD = document.createElement("div");
-    weatherD.innerText = weather;
-    weatherD.classList.add("weather-d");
-    weathers.appendChild(weatherD);
+function weatherDisplay(weatherD) {
+    weather.innerText = weatherD;
 }
 
 /*
     humidity
 */
-function humidityDisplay(humidity) {
-    let humidityD = document.createElement("div");
-    humidityD.innerText = "Humidity: " + humidity + "%";
-    humidityD.classList.add("humidity");
-    humidityS.appendChild(humidityD);
+function humidityDisplay(humidityD) {
+    humidity.innerText = "Humidity: " + humidityD + "%";
 }
 
 

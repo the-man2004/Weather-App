@@ -31,9 +31,28 @@ form {
 }
 
 .info {
-    margin-left: 20px;
     margin-top: 20px;
     color: white;
+    background-color: hsla(60, 100%, 50%, 0.1);
+    border: 2px solid yellow;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.city, .country, .temperature, .wind, .weather, .humidity {
+    padding: 2px 4px 2px 4px;
+}
+
+.city, .country {
+    font-size: 4rem;
+}
+
+.temperature, .wind, .weather, .humidity {
+    font-size: 2.5rem;
 }
 
 
